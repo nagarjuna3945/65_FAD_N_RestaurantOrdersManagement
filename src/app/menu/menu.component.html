@@ -1,0 +1,36 @@
+<div class="col-12 col-md-10 shadow mt-5 bg-white mx-auto pb-4">
+    <app-header></app-header>
+    <div class="row">
+        <div class="col-md-6 col-12 mt-4 mx-auto">
+            <mat-tab-group>
+                <mat-tab label="breakfast">
+                    <app-option-menu *ngFor="let option of breakfasts" [item]="option" (valueChange)='addItem($event)'></app-option-menu>
+                </mat-tab>
+                <mat-tab label="Lunches
+                ">
+                    <app-option-menu *ngFor="let option of  lunches" [item]="option" (valueChange)='addItem($event)'></app-option-menu>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+        <div class="orders col-12 col-md-6 pt-4 ">
+            <form [formGroup]="client">
+                <input #content formControlName="content" placeholder="Client
+                *" />
+                <div *ngFor="let item of orders" class="row  pt-3">
+                    <div class="col-5">
+                        <span>{{item.value}}</span>
+                    </div>
+                    <div class="col-5">
+                        <span>S/. {{item.precio}}</span>
+                    </div>
+                    <div class="col-2">
+                        <i class="fas fa-trash-alt" (click)="deleteItem(item.pedidoId, item.precio)"></i>
+                    </div>
+                </div>
+                <p class="p-3 mt-1 bg-light">Total S/.{{total}}</p>
+                <button type="button" class="btn btn-danger" *ngIf="total !== 0" (click)="addOrder()" [disabled]="!client.valid">Send to kitchen
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

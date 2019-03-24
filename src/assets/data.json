@@ -1,0 +1,49 @@
+[{
+        "Desayuno": {
+            "option1": {
+                "value": "Idly",
+                "precio": 20
+            },
+            "option2": {
+                "value": "Chapathi",
+                "precio": 25
+            },
+            "option3": {
+                "value": "Lemon rice",
+                "precio": 25
+            },
+            "option4": {
+                "value": "Dhosa",
+                "precio": 25
+            }
+        }
+    },
+    {
+        "Almuerzo": {
+            "option1": {
+                "value": " Veg-Fried Rice",
+                "precio": 40
+            },
+            "option2": {
+                "value": "Veg-Biryani",
+                "precio": 40
+            },
+            "option3": {
+                "value": "Meals",
+                "precio": 45
+            },
+            "option4": {
+                "value": "Egg-Biryani",
+                "precio": 50
+            },
+            "option5": {
+                "value": "Chicken-Biryani",
+                "precio": 90
+            },
+            "option6": {
+                "value": "Manchuria",
+                "precio": 40
+            }
+        }
+    }
+]
